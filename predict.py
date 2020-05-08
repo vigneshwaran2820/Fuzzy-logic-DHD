@@ -16,5 +16,11 @@ model = joblib.load('model.pkl')
 new_model = joblib.load('xgb_model.pkl')
 a = np.array([57,0,1,130,236,0,0,174,0,1.1,1,1,2])
 a = a.reshape(1,-1)
-print('Tree prediction:',*model.predict(a))
-print('XGBoot prediction:',*new_model.predict(a))
+with open("datax.csv") as csvfile:
+  reader=csv.reader(csvfile,quoting=csv.QUOTE_NONNUMERIC)
+  for x in reader:
+    y=np.array(x)
+    y=y.reshape(1,-1)
+    print(y)
+    print('Tree prediction:',*model.predict(y))
+    print('XGBoot prediction:',*new_model.predict(y))
