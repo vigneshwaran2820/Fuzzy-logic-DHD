@@ -1,7 +1,7 @@
 import numpy as np
 import skfuzzy as fuzz
 import matplotlib.pyplot as plt
-
+#graph
 x_average  = np.arange(0, 101, 1)
 average = fuzz.trimf(x_average, [0, 0, 53])
 
