@@ -1,5 +1,5 @@
 # Fuzzy-logic-DHD
-
+$
 fuzzy-logic-DHD is very useful and helpful tool for heart diseases dignostics
 
 # Features
